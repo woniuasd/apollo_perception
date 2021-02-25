@@ -1,0 +1,1 @@
+add_library(blob blob.cc blob.h)
