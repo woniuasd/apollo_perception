@@ -66,11 +66,11 @@ license and copyright terms herein.
 #include <string>
 #include <vector>
 
-// #include "absl/strings/str_cat.h"
-// #include "absl/strings/str_join.h"
+#include "absl/strings/str_cat.h"
+#include "absl/strings/str_join.h"
 
-// #include "cyber/common/log.h"
-// #include "modules/perception/base/syncedmem.h"
+#include "cyber/common/log.h"
+#include "modules/perception/base/syncedmem.h"
 
 namespace apollo {
 namespace perception {

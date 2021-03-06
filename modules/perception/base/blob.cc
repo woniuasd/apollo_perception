@@ -61,7 +61,7 @@ license and copyright terms herein.
  * limitations under the License.
  *****************************************************************************/
 
-#include "./blob.h"
+#include "modules/perception/base/blob.h"
 #include <limits>
 
 namespace apollo {
