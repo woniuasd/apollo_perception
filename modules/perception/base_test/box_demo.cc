@@ -13,20 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *****************************************************************************/
-#include "gtest/gtest.h"
 
-#include "modules/perception/base/common.h"
+#include "modules/perception/base/box.h"
 
-namespace apollo {
-namespace perception {
-namespace base {
+int main(){
 
-TEST(CommonTest, GPUAssertTest) {
-#if USE_GPU == 1
-  GPUAssert(cudaSetDevice(-1), __FILE__, __LINE__, false);
-#endif
+    using namespace apollo::perception::base;
+    BBox2D<int> bbox(1, 2, 3, 4);
+    Rect<int> rect = static_cast<Rect<int>>(bbox);
+
 }
 
-}  // namespace base
-}  // namespace perception
-}  // namespace apollo

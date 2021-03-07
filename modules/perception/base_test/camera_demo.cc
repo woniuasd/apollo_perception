@@ -13,27 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *****************************************************************************/
-#include "modules/perception/base/object_pool_types.h"
 
-#include "cyber/common/log.h"
+#include "modules/perception/base/camera.h"
+int main(){
 
-namespace apollo {
-namespace perception {
-namespace base {
+  using namespace apollo::perception::base;
+  PinholeCameraModel camera_model;
+  camera_model.set_width(1920);
+  camera_model.set_height(1080);
+  camera_model.get_width();
+  camera_model.get_height();
 
-// @brief call pool instance once to initialize memory
-__attribute__((constructor)) void PoolInitialize() {
-//  ObjectPool::Instance();
-//  PointFCloudPool::Instance();
-//  PointDCloudPool::Instance();
-//  FramePool::Instance();
-//#ifndef PERCEPTION_BASE_DISABLE_POOL
-//  AINFO << "Initialize base object pool (no-malloc).";
-//#else
-//  AINFO << "Initialize base object pool (malloc).";
-//#endif
 }
-
-}  // namespace base
-}  // namespace perception
-}  // namespace apollo

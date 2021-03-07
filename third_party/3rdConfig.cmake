@@ -24,5 +24,10 @@ if(GTest_FOUND)
     include_directories(${GTEST_INCLUDE_DIRS})
 endif()
 find_package(Threads REQUIRED)
-# #eigen
-# include_directories(${CMAKE_CURRENT_LIST_DIR}/eigen/include/eigen3)
+find_package( OpenCV REQUIRED )
+include_directories(${OpenCV_INCLUDE_DIRS})
+#boost
+find_package(Boost)
+if(Boost_FOUND)
+    include_directories(${Boost_INCLUDE_DIRS})
+endif()

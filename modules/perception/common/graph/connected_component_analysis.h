@@ -13,27 +13,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *****************************************************************************/
-#include "modules/perception/base/object_pool_types.h"
+
+#pragma once
+
+#include <queue>
+#include <vector>
 
 #include "cyber/common/log.h"
 
 namespace apollo {
 namespace perception {
-namespace base {
+namespace common {
 
-// @brief call pool instance once to initialize memory
-__attribute__((constructor)) void PoolInitialize() {
-//  ObjectPool::Instance();
-//  PointFCloudPool::Instance();
-//  PointDCloudPool::Instance();
-//  FramePool::Instance();
-//#ifndef PERCEPTION_BASE_DISABLE_POOL
-//  AINFO << "Initialize base object pool (no-malloc).";
-//#else
-//  AINFO << "Initialize base object pool (malloc).";
-//#endif
-}
+/*
+ * @brief: bfs based connected component analysis
+ * @params[IN] graph: input graph for connected component analysis
+ * @params[OUT] components: connected components of input graph
+ * @return nothing
+ * */
+void ConnectedComponentAnalysis(const std::vector<std::vector<int>>& graph,
+                                std::vector<std::vector<int>>* components);
 
-}  // namespace base
+}  // namespace common
 }  // namespace perception
 }  // namespace apollo
