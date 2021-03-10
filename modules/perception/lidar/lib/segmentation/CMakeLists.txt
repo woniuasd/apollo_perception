@@ -1,2 +1,6 @@
-add_subdirectory(cnnseg)
-add_subdirectory(ncut)
+file(GLOB NCUT_SRC ${CMAKE_CURRENT_LIST_DIR}/ncut/*.cc)
+add_library(ncut ${NCUT_SRC})
+file(GLOB SPP_ENGINE_SRC ${CMAKE_CURRENT_LIST_DIR}/cnnseg/spp_engine/*.cc)
+add_library(spp_engine ${SPP_ENGINE_SRC})
+file(GLOB CNNSEG_SRC ${CMAKE_CURRENT_LIST_DIR}/cnnseg/*.cc)
+add_library(cnnseg ${CNNSEG_SRC})

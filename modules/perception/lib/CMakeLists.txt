@@ -1,0 +1,5 @@
+file(GLOB CONFIG_MANAGER_SRC ${CMAKE_CURRENT_LIST_DIR}/config_manager/*.cc)
+file(GLOB REGISTERER_SRC ${CMAKE_CURRENT_LIST_DIR}/registerer/*.cc)
+file(GLOB THREAD_SRC ${CMAKE_CURRENT_LIST_DIR}/thread/*.cc)
+add_library(perception_lib ${CONFIG_MANAGER_SRC} ${REGISTERER_SRC} ${THREAD_SRC})
+target_link_libraries(perception_lib perception_common)

@@ -1,0 +1,2 @@
+file(GLOB POINTCLOUD_PREPROCESSOR_SRC ${CMAKE_CURRENT_LIST_DIR}/*.cc)
+add_library(pointcloud_preprocessor ${POINTCLOUD_PREPROCESSOR_SRC})
